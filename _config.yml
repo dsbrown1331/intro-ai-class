@@ -1,0 +1,17 @@
+title: CS 6300 — Artificial Intelligence
+description: University of Utah — CS 6300 (Spring 2024)
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+# Optional: update these with your details
+author:
+  name: Daniel Brown
+  email: dsbrown@cs.utah.edu
+url: ""
+baseurl: ""
