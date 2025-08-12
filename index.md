@@ -1,3 +1,8 @@
+---
+title: CS 5955/6955 Advanced Artificial Intelligence
+---
+
+
 # CS 5955/6955 Advanced Artificial Intelligence
 
 ## Navigation
