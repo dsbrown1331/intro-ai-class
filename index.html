@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional: Add a CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>CS 5955/6955 Advanced Artificial Intelligence</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://utah.instructure.com/courses/1027622/assignments/syllabus">Canvas Class Page</a></li>
+            <li><a href="https://piazza.com/utah/spring2025/cs6955001spring2025/home">Piazza</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+
+
+    <h2>Class Overview</h2>
+    This course focuses on advanced algorithms for intelligent sequential decision making with a focus on modern deep learning-based methods. The class will cover both the theory and practical details of the algorithms behind recent breakthroughs in many types of AI decision making, including game playing, robotics, recommendation systems, and large language models. Topics include bandit algorithms, Markov decision processes, partially observable Markov decision processes, reinforcement learning, imitation learning, inverse reinforcement learning, and reinforcement learning from human feedback.
+
+    This will be a fun, but challenging class.  It is an advanced AI class so we will assume a basic understanding of machine learning basics (supervised learning, loss functions, gradient descent) and a basic understanding of AI basics (search problems, MDPs, RL high-level ideas). Note that these topics can be picked up during the class as we will try to keep things self-contained, but we will go over basic topics quickly to get to more advanced materials. Students should be comfortable writing Python code and digging through and understanding code written by others.
+
+    
+    
+    <section id="schedule">
+        <h2>Class Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Topic</th>
+                    <th>Slides</th>
+                    <th>Readings</th>
+                    <th>Assignment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan 6</td>
+                    <td>Class Intro</td>
+                    <td><a href="slides/intro.pdf">Slides</a></td>
+                    <td>Optional: <a href="readings/Python_Tips.pdf">Python Notes (Alan Kuntz)</a> </td>
+                    <td>Optional: <a href="https://inst.eecs.berkeley.edu/~cs188/fa24/projects/proj0/">Python Tutorial (Berkeley AI Class)</a></td>
+                </tr>
+                 <tr>
+                    <td>Jan 8</td>
+                    <td>Behavioral Cloning</td>
+                    <td><a href="slides/bc.pdf">Slides</a></td>
+                    <td> Optional: <a href="https://arxiv.org/abs/1805.01954">Behavioral Cloning from Observation</a>, <a href="https://arxiv.org/abs/1011.0686">DAgger</a>, <a href="https://arxiv.org/abs/2109.08273">ThriftyDAgger</a> </td>
+                    <td> <a href="https://github.com/dsbrown1331/imitation_learning">Behavior Cloning in PyTorch</a> (due Friday Jan 17) </td>
+                </tr>
+                 <tr>
+                    <td>Jan 13</td>
+                    <td>Intro to Advanced Behavior Cloning</td>
+                    <td><a href="slides/advanced-bc-slides.pdf">Slides</a></td>
+                    <td>Choose one and submit reading report before class: <a href="https://arxiv.org/abs/2109.00137">Implicit Behavioral Cloning</a>, <a href="https://arxiv.org/abs/2304.13705">Action Chunking Transformer</a>, <a href="https://arxiv.org/abs/2303.04137">Diffusion Policy</a></td>
+                    <td></td>
+              
+                </tr>
+                <tr>
+                    <td>Jan 15</td>
+                    <td>More Advanced Behavior Cloning</td>
+                    <td><a href="slides/advanced-bc-slides.pdf">Slides</a></td>
+                    <td></td>
+                    <td></td>  
+                </tr>
+                <tr>
+                    <td>Jan 22</td>
+                    <td>Multi-Armed Bandits and Evaluative Feedback</td>
+                    <td><a href="slides/bandits.pdf">Slides</a></td>
+                    <td><a href="http://incompleteideas.net/book/ebook/node14.html">Sutton and Barto 2.1-2.5</a></td>
+                    <td><a href="https://docs.google.com/document/d/1HsvielgBPUZA-MiO3Y2m4pEE5iXndgOi7TWyEZyvPpE/edit?usp=sharing">Multi-Armed Bandits</a> (due Fri Jan 31)</td>  
+                </tr>
+                <tr>
+                    <td>Jan 27</td>
+                    <td>More Bandits</td>
+                    <td><a href="slides/bandits.pdf">Slides</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Jan 29</td>
+                    <td>Intro to Markov Decision Processes</td>
+                    <td><a href="slides/mdps.pdf">Slides</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 3</td>
+                    <td>Solving MDPs</td>
+                    <td><a href="slides/mdps.pdf">Slides</a></td>
+                    <td><a href="http://incompleteideas.net/book/ebook/node40.html">Exact Solution Methods for MDPs</a></td>
+                    <td><a href="https://github.com/dsbrown1331/solving-mdps">Homework 3</a> (Due Feb 10)</td>
+                </tr>
+                <tr>
+                    <td>Feb 5</td>
+                    <td>Value-Based RL and Temporal Difference Leanring</td>
+                    <td><a href="slides/dqn.pdf">Slides</a></td>
+                    <td><a href="http://incompleteideas.net/book/ebook/node27.html">Intro to RL</a>, <a href="http://incompleteideas.net/book/ebook/node60.html">TD methods</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 10</td>
+                    <td>Q-Learning and DQN</td>
+                    <td><a href="slides/dqn.pdf">Slides</a></td>
+                    <td><a href="http://incompleteideas.net/book/ebook/node65.html">Q-Learning</a>, <a href="readings/dqn.pdf">Nature DQN</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 12</td>
+                    <td>Intro to Policy-Gradients for RL</td>
+                    <td><a href="slides/vpg.pdf">Slides</a></td>
+                    <td><a href="https://spinningup.openai.com/en/latest/spinningup/rl_intro.html">Read Intro Parts 1-3</a></td>
+                    <td><a href="https://github.com/dsbrown1331/q-learning-homework">Homework 4: Q-Learning and DQN (due Feb 25) </a> </td>
+                </tr>
+                <tr>
+                    <td>Feb 19</td>
+                    <td>Policy Gradients and REINFORCE</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 24</td>
+                    <td>Alpha Go</td>
+                    <td><a href="slides/alphaGo.pdf">Slides</a></td>
+                    <td><a href="readings/alphaGo.pdf">Alpha Go</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Feb 26</td>
+                    <td>No Class: Do Reading Assignment Instead</td>
+                    <td></td>
+                    <td></td>
+                    <td>Submit reading report by midnight Feb 26 via Canvas on <a href="readings/alphaGoZero.pdf">Alpha Go Zero</a>. </td>
+                </tr>
+                <tr>
+                    <td>Mar 3</td>
+                    <td>Special Topics: Shared Control, Early Failure Detection for Robot Surgery</td>
+                    <td></td>
+                    <td><a href="https://arxiv.org/abs/2501.08389">VOSA</a>, <a href="https://arxiv.org/abs/2501.10561">Early Failure Detection</a> </td>
+                    <td>Pick one paper from the readings for today and submit reading report before class.</td>
+                </tr>
+                <tr>
+                    <td>Mar 5</td>
+                    <td>Special Topics: RLHF for Robot Surgery, Explainable Reward Learning, Adversarial Attacks on Behavioral Cloning</td>
+                    <td></td>
+                    <td><a href="https://arxiv.org/abs/2404.07185">RLHF for Surgery</a>, <a href="https://arxiv.org/abs/2306.13004">Reward DDTs</a>, <a href="https://arxiv.org/abs/2502.03698">Adversarial Attacks</a></td>
+                    <td>Pick one paper from the readings for today and submit reading report before class.</td>
+                </tr>
+                <tr>
+                    <td>Mar 10-14</td>
+                    <td>Spring Break</td>
+                    <td></td>
+                    <td></td>
+                    <td>Final project team selection due.</td>
+                </tr>
+                <tr>
+                    <td>Mar 17</td>
+                    <td>Actor Critic Algorithms</td>
+                    <td><a href="slides/ac.pdf">Slides</a></td>
+                    <td><a href="https://arxiv.org/abs/1602.01783">A3C</a>, <a href="https://arxiv.org/abs/1707.06347">PPO</a></td>
+                    <td>Final project pitch due on Canvas. Instructions <a href="https://docs.google.com/document/d/11IqTbuJrvu5esMOVrQMxtfG7F3IoS5a5G6zdUOVmN-g/edit?tab=t.0">here</a>.</td>
+                </tr>
+                <tr>
+                    <td>Mar 19</td>
+                    <td>PPO</td>
+                    <td><a href="slides/ac.pdf">Slides</a></td>
+                    <td><a href="https://arxiv.org/abs/1602.01783">A3C</a>, <a href="https://arxiv.org/abs/1707.06347">PPO</a></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td>Mar 24</td>
+                    <td>DDPG, TD3, and SAC</td>
+                    <td><a href="slides/sac.pdf">Slides</a></td>
+                    <td><a href="https://arxiv.org/abs/1509.02971">DDPG</a>, <a href="https://arxiv.org/abs/1802.09477">TD3</a>, <a href="https://arxiv.org/abs/1801.01290">SAC</a></td>
+                     <td></td>
+                </tr>
+                 <tr>
+                    <td>Mar 26</td>
+                    <td>Multi-Agent RL</td>
+                    <td><a href="slides/marl.pdf">Slides</a></td>
+                    <td><a href="https://www.marl-book.com/download/marl-book.pdf#page=118.10">MARL book (chapter 5)</a>,<a href="https://arxiv.org/abs/1706.05296">VDN</a>,<a href="https://arxiv.org/abs/1803.11485">QMIX</a>,<a href="https://arxiv.org/abs/2103.01955">MAPPO</a></td>
+                    <td><a href="https://github.com/dsbrown1331/policy_gradient_homework/">Homework 5</a> due <strong>March 28</strong></td>
+                </tr>
+                 <tr>
+                    <td>Mar 31</td>
+                    <td>Model Based RL</td>
+                    <td><a href="slides/mbrl.pdf">Slides</a></td>
+                    <td><a href="https://worldmodels.github.io/">World Models</a>, <a href="https://arxiv.org/abs/1811.04551">PlaNet Paper</a> or <a href="https://planetrl.github.io/">PlaNet Blog</a>, <a href="https://arxiv.org/abs/1912.01603">Dreamer</a></td>
+                    <td>Read one of the above papers/posts and submit a reading report before class.</td>
+                </tr>
+                 <tr>
+                    <td>Apr 2</td>
+                    <td>Inverse RL and Reward Learning</td>
+                    <td><a href="slides/irl.pdf">Slides</a></td>
+                    <td></td>
+                    <td><a href="https://docs.google.com/document/d/1Zs3T6rpvUoD_Of6vPbWDmN0BZ0ACgvpdJ1GLx2EgpDs/edit?usp=sharing">Final Project Lit Review and Full Proposal</a> due April 4.</td>
+                </tr>
+                  <tr>
+                    <td>Apr 7</td>
+                    <td>RLHF</td>
+                    <td><a href="slides/rlhf.pdf">Slides</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Apr 9</td>
+                    <td>LLM Agents and RL</td>
+                    <td><a href="slides/llms.pdf">Slides</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Apr 14</td>
+                    <td>Final project presentations</td>
+                    <td><a href="https://docs.google.com/spreadsheets/d/1dLdfva2XMdq0dy3vKuOLGT9II3VtTkRq-UzfmU0GHDA/edit?usp=sharing">Schedule</a></td>
+                    <td><a href="https://docs.google.com/presentation/d/1LKzyLF9cdSfQmqAcbbSo9_HZk2HUHtKiyIW5Fbw2sF0/edit?usp=sharing"> Apr 14 Shared Slide Deck</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Apr 16</td>
+                    <td>Final project presentations</td>
+                    <td><a href="https://docs.google.com/spreadsheets/d/1dLdfva2XMdq0dy3vKuOLGT9II3VtTkRq-UzfmU0GHDA/edit?usp=sharing">Schedule</a></td>
+                    <td><a href="https://docs.google.com/presentation/d/1HLtQOK4Wm_JlWetw-JRgXuZHHfPAyNmbol4z6lFXZtc/edit?usp=sharing"> Apr 16 Shared Slide Deck</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Apr 21</td>
+                    <td>Final project presentations</td>
+                    <td><a href="https://docs.google.com/spreadsheets/d/1dLdfva2XMdq0dy3vKuOLGT9II3VtTkRq-UzfmU0GHDA/edit?usp=sharing">Schedule</a></td>
+                    <td><a href="https://docs.google.com/presentation/d/1JchzGIfJp3yoEgmDnnv2ka-7yc1c1k5No3gc_w-ctB4/edit?usp=sharing">Apr 21 Shared Slide Deck</a></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td>Apr 30</td>
+                    <td>Final project reports due</td>
+                    <td></td>
+                    <td><a href="https://docs.google.com/document/d/1dPOIV5jSvPTkgVJgV6b7HqZDdUD6ZODHJE9hbDEHwnI/edit?usp=sharing">Instructions</a></td>
+                    <td>Use <a href="https://www.overleaf.com/project/636c0de65de98308dfee6a61">this</a> template (simply go to menu and select copy project).</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <p>Here you can find supplementary materials, links, etc.
+        <ul>
+            <li>Sutton and Barto RL books <a href="http://incompleteideas.net/book/ebook/the-book.html">First Edition (html)</a>, <a href="http://incompleteideas.net/book/RLbook2020.pdf">Second Edition (pdf)</a>
+            <li><a href="https://ai.berkeley.edu/lecture_videos.html">Berkeley Intro AI Lectures (Scroll down to earlier years since links at top seem to be broken)</a> </li>
+            <li><a href="https://rail.eecs.berkeley.edu/deeprlcourse/">Berkeley Deep RL Class</a> and <a href="https://www.youtube.com/playlist?list=PL_iWQOsE6TfURIIhCrlt-wj9ByIVpbfGc">Videos</a></li>
+            <li>My Human-AI Alignment Class <a href="https://users.cs.utah.edu/~dsbrown/cs6960.html">Reading List</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ">David Silver RL Lectures</a></li>
+        </ul>
+
+        <p> PyTorch Tutorials</p>
+        <ul>
+            <li><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html">60 minute blitz</a></li>
+            <li><a href="https://clemsonciti.github.io/rcde_workshops/pytorch/03-regression_and_classification.html">Regression and Classification</li>
+            <li><a href="https://machinelearningmastery.com/building-a-regression-model-in-pytorch/">Regression</a></li>
+            <li><a href="https://www.geeksforgeeks.org/classification-using-pytorch-linear-function/">Classification</a></li>
+        </ul>
+
+        <p>RL Code Resources</p>
+            <li><a href="https://github.com/vwxyzjn/cleanrl?tab=readme-ov-file">Clean RL: single-file implementations of popular RL algos</a></li>
+            <li><a href="https://spinningup.openai.com/en/latest/user/introduction.html">Spinning Up in Deep RL: simple clean implementations of popular RL algos. Hasn't been updated to work with newest version of Gymnasium.</a></li>
+            <li><a href="https://stable-baselines3.readthedocs.io/en/master/">Stable Baselines: Extensive codebase for running RL experiments, lots of algorithm implementations.</a></li>
+
+        
+        </p>
+    </section>
+
+</body>
+</html>
